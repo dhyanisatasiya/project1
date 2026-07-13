@@ -1,0 +1,112 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+
+body{background:#F8F4FC;color:#444;}
+
+.container{width:90%;max-width:1200px;margin:auto;}
+
+.page-title{
+background:#5E0A6F;
+padding:70px 0;
+text-align:center;
+color:#fff;
+}
+
+.page-title p{color:#DBC8E5;margin-top:10px;}
+
+.contact{padding:80px 0;}
+
+.contact-box{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.contact-info,.contact-form{
+background:#fff;
+padding:35px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(94,10,111,.12);
+}
+
+.contact-info h2,
+.contact-form h2{
+color:#5E0A6F;
+margin-bottom:15px;
+}
+
+.contact-info p{
+margin-bottom:25px;
+line-height:28px;
+}
+
+.card{
+display:flex;
+align-items:center;
+gap:18px;
+padding:15px;
+margin-bottom:18px;
+background:#F8F4FC;
+border-left:5px solid #5E0A6F;
+border-radius:8px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateX(8px);
+}
+
+.card i{
+width:55px;
+height:55px;
+background:#5E0A6F;
+color:#fff;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:22px;
+}
+
+.card h3{
+color:#5E0A6F;
+margin-bottom:5px;
+}
+
+input,textarea{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:6px;
+outline:none;
+}
+
+textarea{
+height:140px;
+resize:none;
+}
+
+button{
+background:#5E0A6F;
+color:#fff;
+padding:14px 30px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#DBC8E5;
+color:#5E0A6F;
+}
+
+
+
+@media(max-width:768px){
+
+.contact-box{
+grid-template-columns:1fr;
+}
+
+}

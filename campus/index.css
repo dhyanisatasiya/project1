@@ -1,0 +1,614 @@
+
+/*====================
+COMMON
+====================*/
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
+body{color:#444;background:#fff;}
+img{width:100%;display:block;}
+a{text-decoration:none;}
+ul{list-style:none;}
+.container{width:90%;max-width:1200px;margin:auto;}
+section{padding:80px 0;}
+
+.section-title{text-align:center;margin-bottom:50px;}
+.section-title h5{color:#5E0A6F;font-size:18px;}
+.section-title h2{color:#5E0A6F;font-size:40px;margin-top:10px;}
+
+/*====================
+HERO
+====================*/
+
+.hero-slider{position:relative;height:90vh;overflow:hidden;padding:0;}
+.slide{position:absolute;width:100%;height:100%;opacity:0;transition:1s;}
+.slide.active{opacity:1;}
+.slide img{height:100%;object-fit:cover;}
+.overlay{position:absolute;inset:0;background:rgba(0,0,0,.45);}
+.hero-content{
+position:absolute;
+top:50%;
+left:8%;
+transform:translateY(-50%);
+color:#fff;
+max-width:650px;
+}
+.hero-content h4{color:#DBC8E5;}
+.hero-content h1{font-size:60px;margin:20px 0;}
+.hero-content p{line-height:30px;margin-bottom:30px;}
+
+.hero-btn a{
+display:inline-block;
+padding:14px 30px;
+border-radius:5px;
+margin-right:10px;
+}
+
+.btn1{background:#5E0A6F;color:#fff;}
+.btn2{background:#DBC8E5;color:#5E0A6F;}
+.btn1:hover{background:#4A0758;}
+.btn2:hover{background:#fff;}
+
+/*====================
+NOTICE
+====================*/
+
+.notice-section{
+background:#5E0A6F;
+color:#fff;
+padding:0;
+}
+
+.notice-section .container{
+display:flex;
+align-items:center;
+}
+
+.notice-title{
+background:#DBC8E5;
+color:#5E0A6F;
+padding:15px 25px;
+font-weight:600;
+}
+
+.notice-section marquee{
+padding-left:20px;
+width:100%;
+}
+
+/*====================
+CARDS
+====================*/
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.card{
+    min-height:240px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.why-grid,
+.department-grid,
+.course-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:50px;
+
+
+
+}
+
+.card,
+.why-box,
+.department-card,
+.course-card{
+background:#fff;
+padding:35px 25px;
+text-align:center;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(94,10,111,.12);
+transition:.3s;
+
+}
+
+.card:hover,
+.why-box:hover,
+.department-card:hover,
+.course-card:hover{
+transform:translateY(-8px);
+}
+
+.card i,
+.why-box i,
+.department-card i{
+font-size:50px;
+color:#5E0A6F;
+margin-bottom:20px;
+
+}
+
+.card h3,
+.why-box h3,
+.department-card h3{
+color:#5E0A6F;
+margin-bottom:10px;
+}
+
+.card p,
+.why-box p,
+.department-card p{
+line-height:28px;
+}
+
+/*====================
+WELCOME
+====================*/
+
+.welcome-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.welcome-image img{
+border-radius:12px;
+
+}
+
+.welcome-content h5{
+color:#5E0A6F;
+margin-bottom:10px;
+}
+
+.welcome-content h2{
+font-size:40px;
+color:#5E0A6F;
+margin-bottom:20px;
+}
+
+.welcome-content p{
+line-height:30px;
+margin-bottom:20px;
+}
+
+.read-btn{
+display:inline-block;
+background:#5E0A6F;
+color:#fff;
+padding:14px 30px;
+border-radius:5px;
+}
+
+.read-btn:hover{
+background:#4A0758;
+}
+
+/*====================
+COURSES
+====================*/
+
+.course-card{
+overflow:hidden;
+padding:0;
+}
+
+.course-content{
+padding:25px;
+}
+
+.course-content h3{
+color:#5E0A6F;
+margin-bottom:15px;
+}
+
+.course-content p{
+line-height:28px;
+margin-bottom:20px;
+}
+
+.course-content a{
+display:inline-block;
+background:#5E0A6F;
+color:#fff;
+padding:10px 22px;
+border-radius:5px;
+}
+
+/*====================
+COUNTER
+====================*/
+
+.counter{
+background:#5E0A6F;
+color:#fff;
+text-align:center;
+}
+
+.counter-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.counter h2{
+font-size:50px;
+color:#DBC8E5;
+margin-bottom:10px;
+}
+
+.counter p{
+font-size:18px;
+}
+
+/*====================
+RESPONSIVE
+====================*/
+
+@media(max-width:768px){
+
+.hero-slider{height:70vh;}
+
+.hero-content{
+left:5%;
+right:5%;
+}
+
+.hero-content h1{
+font-size:35px;
+}
+
+.welcome-grid{
+grid-template-columns:1fr;
+}
+
+.quick-grid,
+.why-grid,
+.department-grid,
+.course-grid,
+.counter-grid{
+grid-template-columns:1fr;
+}
+
+.section-title h2{
+font-size:30px;
+}
+
+}/*====================
+CHAIRMAN
+====================*/
+
+.chairman-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.chairman-img img{
+border-radius:12px;
+}
+
+.chairman-content h5{
+color:#5E0A6F;
+margin-bottom:10px;
+}
+
+.chairman-content h2{
+color:#5E0A6F;
+font-size:40px;
+margin-bottom:20px;
+}
+
+.chairman-content p{
+line-height:30px;
+margin-bottom:20px;
+}
+
+/*====================
+FACILITIES
+====================*/
+
+.facility-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.facility-card{
+    min-height:250px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+}
+.life-grid,
+.news-grid,
+.testimonial-grid,
+.event-grid,
+.achievement-grid,
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.facility-card,
+.life-box,
+.news-card,
+.testimonial-card,
+.event-card,
+.achievement-box{
+background:#fff;
+padding:30px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 8px 20px rgba(94,10,111,.12);
+transition:.3s;
+}
+
+.facility-card:hover,
+.life-box:hover,
+.news-card:hover,
+.testimonial-card:hover,
+.event-card:hover,
+.achievement-box:hover{
+transform:translateY(-8px);
+}
+
+.facility-card i,
+.achievement-box i,
+.contact-grid i{
+font-size:45px;
+color:#5E0A6F;
+margin-bottom:15px;
+}
+
+.facility-card h3,
+.achievement-box h3{
+color:#5E0A6F;
+margin-bottom:10px;
+}
+
+.facility-card p{
+line-height:28px;
+}
+
+/*====================
+CAMPUS LIFE
+====================*/
+
+.life-box img{
+height:220px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.life-box h3{
+color:#5E0A6F;
+}
+
+/*====================
+GALLERY
+====================*/
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+/*====================
+NEWS
+====================*/
+
+.news-card{
+padding:0;
+overflow:hidden;
+}
+
+.news-content{
+padding:20px;
+}
+
+.news-content span{
+color:#5E0A6F;
+font-size:14px;
+}
+
+.news-content h3{
+margin:15px 0;
+color:#5E0A6F;
+}
+
+.news-content a{
+display:inline-block;
+margin-top:15px;
+color:#5E0A6F;
+font-weight:600;
+}
+
+/*====================
+RECRUITERS
+====================*/
+
+.logo-slider{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:30px;
+align-items:center;
+}
+
+.logo-slider img{
+height:80px;
+object-fit:contain;
+}
+
+/*====================
+TESTIMONIAL
+====================*/
+
+.testimonial-card img{
+width:90px;
+height:90px;
+border-radius:50%;
+margin:auto;
+margin-bottom:15px;
+}
+
+.testimonial-card h3{
+color:#5E0A6F;
+margin-bottom:10px;
+}
+
+.testimonial-card p{
+line-height:28px;
+}
+
+/*====================
+ADMISSION
+====================*/
+
+.admission-section{
+background:#5E0A6F;
+text-align:center;
+color:#fff;
+}
+
+.admission-content h5{
+color:#DBC8E5;
+}
+
+.admission-content h2{
+font-size:42px;
+margin:20px 0;
+}
+
+.admission-content p{
+max-width:700px;
+margin:auto;
+line-height:30px;
+}
+
+.admission-btn{
+margin-top:30px;
+}
+
+.apply-btn,
+.contact-btn{
+display:inline-block;
+padding:14px 30px;
+margin:10px;
+border-radius:5px;
+}
+
+.apply-btn{
+background:#DBC8E5;
+color:#5E0A6F;
+}
+
+.contact-btn{
+background:#fff;
+color:#5E0A6F;
+}
+
+/*====================
+EVENTS
+====================*/
+
+.event-card h3{
+font-size:45px;
+color:#5E0A6F;
+}
+
+.event-card span{
+display:block;
+margin-bottom:15px;
+color:#777;
+}
+
+.event-card h4{
+margin-bottom:10px;
+}
+
+/*====================
+CONTACT STRIP
+====================*/
+
+.contact-strip{
+background:#F8F4FC;
+text-align:center;
+}
+
+.contact-grid div{
+padding:30px;
+}
+
+.contact-grid i{
+font-size:40px;
+display:block;
+margin-bottom:15px;
+}
+
+.contact-grid h4{
+color:#5E0A6F;
+margin-bottom:10px;
+}
+
+/*====================
+MAP
+====================*/
+
+.map-section iframe{
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+/*====================
+RESPONSIVE
+====================*/
+
+@media(max-width:768px){
+
+.chairman-grid{
+grid-template-columns:1fr;
+}
+
+.facility-grid,
+.life-grid,
+.gallery-grid,
+.news-grid,
+.logo-slider,
+.testimonial-grid,
+.event-grid,
+.achievement-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.admission-content h2{
+font-size:30px;
+}
+
+}

@@ -1,0 +1,357 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f8f8f8;
+    color:#333;
+}
+
+/* Hero */
+
+.hero{
+    height:380px;
+    background:linear-gradient(rgba(40,20,70,.75),rgba(40,20,70,.75)),
+    url('img/campose.png');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+    letter-spacing:1px;
+}
+
+/* Common */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:80px auto;
+}
+
+.heading{
+    text-align:center;
+    color:#32145b;
+    font-size:38px;
+    margin-bottom:45px;
+}
+
+/* About */
+
+.about{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h2{
+    color:#32145b;
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    font-size:17px;
+    line-height:32px;
+    color:#555;
+    text-align:justify;
+}
+
+/* Journey */
+
+.journey{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card i{
+    font-size:45px;
+    color:#d39b1c;
+    margin-bottom:20px;
+}
+
+.card h3{
+    color:#32145b;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.card p{
+    color:#666;
+    line-height:28px;
+}
+
+/* Mission */
+
+.mission{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.box{
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+}
+
+.box h2{
+    color:#32145b;
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+.box p{
+    color:#555;
+    line-height:30px;
+}
+
+/* Values */
+
+.values{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.values div{
+    background:#32145b;
+    color:#fff;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.values div:hover{
+    transform:translateY(-8px);
+}
+
+.values i{
+    font-size:40px;
+    color:#f4b21d;
+    margin-bottom:15px;
+}
+
+.values h3{
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.values p{
+    line-height:28px;
+}
+
+/* Why */
+
+.why{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.why div{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+    transition:.4s;
+}
+
+.why div:hover{
+    transform:translateY(-8px);
+}
+
+.why i{
+    font-size:40px;
+    color:#d39b1c;
+    margin-bottom:15px;
+}
+
+.why h3{
+    color:#32145b;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.why p{
+    color:#666;
+    line-height:28px;
+}
+
+/* Counter */
+
+.counter{
+    background:#32145b;
+    padding:70px 0;
+}
+
+.count{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    text-align:center;
+}
+
+.count div{
+    transition:.4s;
+}
+
+.count div:hover{
+    transform:scale(1.08);
+}
+
+.count h1{
+    color:#f4b21d;
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.count p{
+    color:#fff;
+    font-size:18px;
+}
+
+/* Principal */
+
+.principal{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.principal-img{
+    flex:1;
+}
+
+.principal-img img{
+    width:100%;
+    max-width:350px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.principal-text{
+    flex:2;
+}
+
+.principal-text h2{
+    color:#32145b;
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.principal-text p{
+    color:#555;
+    line-height:32px;
+    text-align:justify;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.journey,
+.values,
+.why,
+.count{
+grid-template-columns:repeat(2,1fr);
+}
+
+.mission{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.about,
+.principal{
+flex-direction:column;
+}
+
+.hero{
+height:300px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.journey,
+.values,
+.why,
+.count{
+grid-template-columns:1fr;
+}
+
+.heading{
+font-size:30px;
+}
+
+.about-text h2,
+.principal-text h2{
+font-size:28px;
+}
+
+.about-image img{
+height:300px;
+}
+
+}
